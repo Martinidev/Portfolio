@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Portfolio</title>
+
+	<!-- Font --> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Petit+Formal+Script&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap 4 & JS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+	<!--GreenSock -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/5ec442c435.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+		<div class="wrapper">
+			<div class="landing-page">
+				<header>
+					<div class="headimg"></div>
+					<nav>
+						<div class="menu-icon">
+							<i class="fas fa-bars"></i>
+						</div>
+
+						<div class="logo">
+							<a href="index.html">SM</a>
+						</div>
+
+						<div class="menu">
+							<ul>
+								<li><a href="index.html">home.</a></li>
+								<li><a href="about.html">about.</a></li>
+								<li><a href="work.html">work.</a></li>
+								<li><a href="contact.html">contact.</a></li>
+							</ul>
+						</div>
+					</nav>
+
+					<div class="sideTxt"><a href="cv/cv.pdf" target="_blank" download>download cv</a></div>
+
+					<div class="soc-media">
+						<ul>
+							<li><a href="https://www.instagram.com/bboymartini/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/stefan.martinovic.564" target="_blank"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="https://codepen.io/Martini097" target="_blank"><i class="fab fa-codepen"></i></a></li>
+						</ul>
+					</div>
+
+					<section class="header">
+						<h1>Stefan Martinovic</h1>
+					</section>
+				</header>
+			</div>
+		</div>
+		<script src="gsap.min.js"></script>
+		<script type="text/javascript">
+
+			//Menu toggle button
+
+			$(document).ready(function(){
+				$(".menu-icon").on("click", function(){
+					$("nav ul").toggleClass("showing");
+				});
+			});
+
+			//scroll animation 
+
+			$(window).on("scroll", function() {
+				if($(window).scrollTop()) {
+					$('nav').addClass('black');
+				}
+				else {
+					$('nav').removeClass('black');
+				};
+			});
+
+			gsap.from(".logo", 1.2, {
+				y: 20,
+				delay: 0.5,
+				opacity: 0,
+				ease: Power4.easeInOut
+			});
+
+			gsap.from(".menu ul li", 1.2, {
+				y: 20,
+				delay: 0.8,
+				opacity: 0,
+				stagger: 0.3,
+				ease: Power4.easeInOut
+			});
+
+
+			gsap.from(".header h1", 1.2, {
+				y: 20,
+				delay: 1,
+				opacity: 0,
+				ease: Power4.easeInOut
+			});
+
+
+			gsap.from(".soc-media ul li", 1.2, {
+				x: -20,
+				opacity: 0,
+				delay: 1.2,
+				stagger: 0.3,
+				ease: Expo.easeInOut
+			});
+
+			gsap.from(".sideTxt", 1.2, {
+				x: 40,
+				delay: 1.4,
+				opacity: 0,
+				ease: Power4.easeInOut
+			});
+
+			gsap.from(".dw-link", 1.2, {
+				x: -40,
+				delay: 1.6,
+				opacity: 0,
+				ease: Expo.easeInOut
+			});
+		</script>
+</body>
+</html>

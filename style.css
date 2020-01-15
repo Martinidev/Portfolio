@@ -1,0 +1,470 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: Montserrat;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: url("../img/body.jpg") 50% 50%;
+	background-size: cover;
+}
+
+.landing-page {
+	width: 100%;
+	height: 100vh;
+}
+
+.headimg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: grayscale(1);
+	width: 30%;
+	height: 70%;
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/portrait.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	z-index: 0;
+}
+
+.logo {
+	position: fixed;
+	float: left;
+	margin: 16px 36px;
+}
+
+.logo a {
+	font-family: Times New Roman;
+	font-size: 14px;
+	text-decoration: none;
+	color: #f0f0f0;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
+.logo a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+nav ul {
+	list-style: none;
+	background: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	color: #fff;
+	padding: 0;
+	text-align: right;
+	margin: 0;
+	transition: 1s;
+}
+
+nav.black ul {
+	background: #000;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 20px;
+}
+
+nav ul li a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #f0f0f0;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+nav ul li a:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #dc143c;
+	transition: width .3s; 
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover:after {
+	width: 100%;
+	transition: width .3s;
+}
+
+.menu-icon {
+	width: 100%;
+	background: #000;
+	text-align: right;
+	box-sizing: border-box;
+	padding: 15px 24px;
+	cursor: pointer;
+	color: #f0f0f0;
+	display: none;
+}
+
+@media(max-width: 768px) {
+	.logo {
+		position: fixed;
+		top: 0;
+		margin-top: 16px;
+	}
+
+	nav ul {
+		max-height: 0px;
+		background: #000;
+	}
+
+	nav.black ul {
+		background: #000;
+	}
+
+	.showing {
+		max-height: 20em;
+	}
+
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		display: block;
+		padding: 16px 0;
+		text-align: center;
+		
+	}
+
+	nav ul li a:hover:after {
+		width: 0;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+}
+
+.sideTxt {
+	position: absolute;
+	bottom: 16px;
+	left: 36px;
+	transform: translateY(-50%);
+}
+
+.sideTxt a {
+	letter-spacing: 1px;
+	font-family: Montserrat;
+	color: #f0f0f0;
+	text-decoration: underline;
+	font-style: italic;
+	font-size: 13px;
+	transition: 350ms ease;
+}
+
+.sideTxt a:hover {
+	color: #dc143c;
+	transition: 350ms ease;
+}
+
+.soc-media {
+	position: absolute;
+	top: 85%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
+.soc-media ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.soc-media ul li {
+	display: block;
+	padding: 10px;
+}
+
+.soc-media ul li a {
+	color: #f0f0f0;
+	font-size: 14px;
+	transition: 350ms ease;
+}
+
+.soc-media ul li a:hover {
+	color: #dc143c;
+	transition: 350ms ease;
+}
+
+.header {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.header h1 {
+	color: #fff;
+	font-weight: 100;
+	font-size: 60px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: Times New Roman;
+}
+
+@media screen and (max-width: 768px) {
+
+	.header h1 {
+		font-size: 50px;
+	}
+
+	.headimg {
+		width: 90%;
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 460px) {
+
+	.header h1 {
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.sideTxt {
+		left: 35%;
+		bottom: 30px;
+	}
+
+	.soc-media {
+		right: 20%;
+	}
+
+	.soc-media ul li {
+		display: inline-block;
+		padding: 0 20px;
+	}
+}
+
+
+
+						/*ABOUT PAGE*/
+
+
+.section-story {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.section-heading {
+	font-size: 80px;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-family: Times New Roman;
+	color: #f0f0f0;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+.section-heading2 {
+	color: #f0f0f0;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.section-para {
+	font-size: 15px;
+	line-height: 2;
+	color: #666;
+	font-weight: 100;
+	width: 100%;
+}
+
+.link {
+	color: #f0f0f0;
+	overflow: hidden;
+	text-decoration: underline;
+	font-style: italic;
+	font-size: 12px;
+	text-transform: uppercase;
+	transition: 350ms ease;
+}
+
+.link:hover {
+	color: #dc143c;
+	transition: 350ms ease;
+}
+
+@media screen and (max-width: 768px) {
+	.section-heading {
+		font-size: 40px;
+		text-align: center;
+		padding-bottom: 25px;
+	}
+
+	.section-para {
+		line-height: 1.2;
+		font-size: 14px;
+	}
+}
+
+						/*PORTFOLIO SECTION*/
+
+
+.project-section {
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.project-section h1 {
+  font-size: 84px;
+  font-family: "Times New Roman";
+  text-transform: uppercase;
+  color: white;
+}
+
+.project-section p {
+  color: grey;
+  width: 100%;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.project-heading {
+  margin-bottom: 120px;
+}
+
+.project-section i {
+  color: white;
+  font-size: 148px;
+}
+
+.project-img {
+  width: 100%;
+  object-fit: cover;
+  height: 80vh;
+}
+
+.project {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+	.project-section i {
+		display: none;
+	}
+
+	.project-section h1 {
+		font-size: 45px;
+	}	
+
+	.project-section p {
+		font-size: 15px;
+	}
+}
+
+
+								/*CONTACT SECTION*/
+
+.contact-section {
+	padding-top: 250px;
+	overflow: hidden;
+}
+
+.contact-heading h1 {
+	font-size: 80px;
+	color: #f0f0f0;
+	font-family: Times New Roman;
+}
+
+.mail {
+	margin-bottom: 20px;
+}
+
+.mail a {
+	font-size: 20px;
+	text-decoration: underline;
+	font-style: italic;
+	color: #f0f0f0;
+	letter-spacing: 1px;
+}
+
+.mail a:hover {
+	color: #f0f0f0;
+}
+
+.contact-info p {
+	line-height: 2;
+	color: #666;
+	width: 100%;
+	font-size: 15px;
+}
+
+.connect {
+	padding-top: 100px;
+	overflow: hidden;
+}
+
+.connect ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.connect ul li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.connect ul li a {
+	text-decoration: none;
+	color: #dc143c;
+	letter-spacing: 1px;
+	font-family: Petit Formal Script;
+	font-size: 13px;
+	transition: 350ms ease;
+}
+
+.connect ul li a:hover {
+	color: #f0f0f0;
+	transition: 350ms ease;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+
+	.contact-section {
+		padding-top: 150px;
+	}
+	.contact-heading h1 {
+		font-size: 50px;
+	}
+
+	.contact-info h1 {
+		font-size: 15px;
+	}
+
+	.connect {
+		padding: 0;
+	}
+
+	.contact-info p {
+		font-size: 14px;
+	}
+
+	.connect ul li {
+		display: block;
+		text-align: center;
+		padding: 10px 0;
+	}
+}
